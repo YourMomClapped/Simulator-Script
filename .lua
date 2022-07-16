@@ -1,8 +1,13 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Simulators", "DarkTheme")
+local Window = Library.CreateLib("Simple Simulator Hub", "DarkTheme")
 
 -- Values
 _G.autoClicker = true -- RANDOM CLICKER SIMULATOR
+
+-- INFO
+local info = Window:NewTab("Information")
+local SectionA = Info:Section("What is Simple Simulator Hub.")
+local SectionB = Info:Section("Simulators scripts that were simple to create have fun"..Player.Name".")
 
 
 -- RANDOM CLICKER SIMULATOR Features
@@ -32,3 +37,5 @@ PunchingSection:NewButton("Auto Rebirth", "It Rebirths for you, you dumb fuck", 
    game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer(1)
 end
 end)
+
+
