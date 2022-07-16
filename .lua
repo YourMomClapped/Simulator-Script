@@ -4,11 +4,6 @@ local Window = Library.CreateLib("Simple Simulator Hub", "DarkTheme")
 -- Values
 _G.autoClicker = true -- RANDOM CLICKER SIMULATOR
 
--- INFO
-local info = Window:NewTab("Information")
-local SectionA = Info:Section("What is Simple Simulator Hub.")
-local SectionB = Info:Section("Simulators scripts that were simple to create have fun"..Player.Name".")
-
 
 -- RANDOM CLICKER SIMULATOR Features
 function autoClicker()
@@ -38,4 +33,15 @@ PunchingSection:NewButton("Auto Rebirth", "It Rebirths for you, you dumb fuck", 
 end
 end)
 
-
+-- INFO
+local Info = Window:NewTab("Information")
+local Section = Info:NewSection("What is Simple Simulator Hub?")
+local ASection = Info:NewSection("Simple Simulator Hub is for more crappy simulators")
+ASection:NewButton("Print Forbidden message", "OMG!", function()
+    game:GetService("StarterGui"):SetCore("SendNotification",{     
+Title = "FORBIDDEN MESSAGE",     
+Text = "UwW Owo -W- owo XwX",
+Button1 = "UwU",
+Duration = 20
+})
+end)
