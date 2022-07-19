@@ -14,6 +14,24 @@ function autoClicker()
 end
 
 
+-- FUNCTION DIG BOMB
+function digBomb()
+    while true do
+ wait(.00000000000000000000000000000000000000000000000000000000000000000000000000001)
+local args = {
+ [1] = 0
+}
+game:GetService("ReplicatedStorage").Rebirth:FireServer(unpack(args))
+end
+end
+
+
+-- Dig BOMB
+local Dig = Window:NewTab("Dig Bomb")
+local DigSection = Dig:NewSection("AutoFarms")
+DigSection:NewButton("Infinite Rebirth", "Auto Farms rebirths for free", function()
+    digBomb()
+end)
 
 
 
